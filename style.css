@@ -1,3 +1,21 @@
+/* ===== REHOBOTH MASALA HOUSE – NEW DESIGN SYSTEM ===== */
+:root {
+  --primary-red: #8B1E1E;
+  --accent-saffron: #E49B0F;
+  --bg-beige: #FAF7F2;
+  --text-dark: #2E1C12;
+  --white: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-beige);
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.6;
+}
+
+
 /* ===== BASIC RESET ===== */
 body {
   margin: 0;
