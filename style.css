@@ -16,40 +16,7 @@ body {
 }
 
 
-/* ===== BASIC RESET ===== */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fffaf3;
-  color: #333;
-}
 
-/* ===== PAGE TITLE ===== */
-h1 {
-  background-color: #7b2e2e;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin: 0;
-}
-
-/* ===== NAVIGATION BAR ===== */
-nav {
-  background-color: #f2e8dc;
-  padding: 12px;
-  text-align: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  margin: 0 12px;
-}
-
-nav a:hover {
-  color: #7b2e2e;
-}
 
 /* ===== PAGE CONTENT ===== */
 p, ul {
@@ -61,11 +28,55 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background-color: #7b2e2e;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
+
+/* ===== HEADER STYLING ===== */
+
+header {
+  background-color: var(--bg-beige);
+  border-bottom: 1px solid #e0d8cc;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.brand p {
+  font-size: 0.85rem;
+  color: #6b4b3e;
+  margin-top: 4px;
+}
+
+/* ===== NAVIGATION (NEW) ===== */
+
+header nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  position: relative;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-red);
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
 }
