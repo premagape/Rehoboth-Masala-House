@@ -31,6 +31,16 @@ header {
   align-items: center;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
 .brand h1 {
   margin: 0;
   font-size: 1.6rem;
