@@ -1,12 +1,16 @@
-/* ===== REHOBOTH MASALA HOUSE – NEW DESIGN SYSTEM ===== */
+/* ===== REHOBOTH MASALA HOUSE – FINAL CLEAN CSS ===== */
+
+/* ---------- COLOR SYSTEM ---------- */
 :root {
   --primary-red: #8B1E1E;
   --accent-saffron: #E49B0F;
   --bg-beige: #FAF7F2;
   --text-dark: #2E1C12;
+  --text-muted: #6b4b3e;
   --white: #ffffff;
 }
 
+/* ---------- GLOBAL ---------- */
 body {
   font-family: Arial, sans-serif;
   background-color: var(--bg-beige);
@@ -15,33 +19,40 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-
+/* ---------- HEADER ---------- */
 header {
   background-color: var(--bg-beige);
   border-bottom: 1px solid #e0d8cc;
 }
 
+/* This controls LEFT–RIGHT layout */
 .header-content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px 20px;
+  width: 100%;
+  padding: 20px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* ---------- BRAND (LOGO + TEXT) ---------- */
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-right: 40px;/* creates visual balance*/
+  gap: 12px; /* controls space between logo and text */
 }
 
+/* LOGO SIZE */
+.logo {
+  height: 82px; /* increase/decrease if needed */
+  width: auto;
+}
+
+/* BRAND TEXT */
 .brand-text {
   display: flex;
   flex-direction: column;
 }
+
 .brand h1 {
   margin: 0;
   font-size: 1.6rem;
@@ -51,57 +62,50 @@ header {
 .brand p {
   margin: 4px 0 0;
   font-size: 0.85rem;
-  color: #6b4b3e;
+  color: var(--text-muted);
 }
 
-header nav{
-  margin-left:auto; /* THIS pushes menu fully to the right*/
-  display:flex;
-  align-item:center;
+/* ---------- NAVIGATION ---------- */
+header nav {
+  display: flex;
+  align-items: center;
 }
-/* ===== NAVIGATION ===== */
 
+/* NAV LINKS */
 header nav a {
-  margin-left: 24px;
+  padding: 0 14px;
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
   position: relative;
 }
 
-header nav{
-  margin-top:12px;
+/* SEPARATOR | BETWEEN LINKS */
+header nav a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -14px;
+  color: #b5a58a;
+  font-weight: 400;
 }
 
-header nav a::after {
-  content: '';
+/* HOVER UNDERLINE EFFECT */
+header nav a::before {
+  content: "";
   position: absolute;
+  left: 0;
+  bottom: -6px;
   width: 0;
   height: 2px;
   background-color: var(--primary-red);
-  left: 0;
-  bottom: -6px;
   transition: width 0.3s ease;
 }
-header nav a:not(:last-child)::before{
-  content:"|";
-  position:absolute;
-  right:-14px;
-  color:#b5a58a;
-  font-weight:400;
-}
 
-header nav a:hover::after {
+header nav a:hover::before {
   width: 100%;
 }
 
-/* ===== PAGE CONTENT ===== */
-
+/* ---------- PAGE CONTENT ---------- */
 main {
   padding: 60px 40px;
-}
-
-.logo {
-  height: 200px;
-  width: auto;
 }
