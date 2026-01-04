@@ -54,6 +54,11 @@ header {
   color: #6b4b3e;
 }
 
+header nav{
+  margin-left:auto; /* THIS pushes menu fully to the right*/
+  display:flex;
+  align-item:center;
+}
 /* ===== NAVIGATION ===== */
 
 header nav a {
@@ -86,6 +91,6 @@ main {
 }
 
 .logo {
-  height: 72px;
+  height: 90px;
   width: auto;
 }
