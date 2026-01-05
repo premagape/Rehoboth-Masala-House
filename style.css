@@ -1,5 +1,13 @@
 /* ===== REHOBOTH MASALA HOUSE – FINAL CLEAN CSS ===== */
 
+/*prevent horizontal scrolling */
+*{
+  box-sizing: border-box;
+}
+html,body{
+  overflow-x: hidden;
+}
+
 /* ---------- COLOR SYSTEM ---------- */
 :root {
   --primary-red: #8B1E1E;
@@ -27,7 +35,7 @@ header {
 
 /* This controls LEFT–RIGHT layout */
 .header-content {
-  width: 100%;
+  max-width: 100%;
   padding: 20px 32px;
   display: flex;
   justify-content: space-between;
@@ -43,7 +51,7 @@ header {
 
 /* LOGO SIZE */
 .logo {
-  height: 82px; /* increase/decrease if needed */
+  height: 100px; /* increase/decrease if needed */
   width: auto;
 }
 
@@ -69,11 +77,13 @@ header {
 header nav {
   display: flex;
   align-items: center;
+  flex-wrap:wrap;
+  max-width:100%
 }
 
 /* NAV LINKS */
 header nav a {
-  padding: 0 14px;
+  padding: 0 10px;
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
