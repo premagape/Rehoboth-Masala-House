@@ -91,12 +91,10 @@ header nav a {
 }
 
 /* SEPARATOR | BETWEEN LINKS */
-header nav a:not(:last-child)::after {
-  content: "|";
-  position: absolute;
-  right: -14px;
-  color: #b5a58a;
-  font-weight: 400;
+header nav a:not(:last-child) {
+border-right: 1px solid #b5a58a;
+  padding-right: 14px;
+  margin-right: 14px;
 }
 
 /* HOVER UNDERLINE EFFECT */
